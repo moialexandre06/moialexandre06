@@ -13,7 +13,6 @@
     }
     </style>   
 </head>
-</style>
     <body>
         <br>
         <kbd>ok</kbd> 
@@ -25,5 +24,26 @@
         <h1 class="texteenrouge">Ceci est rouge</h1>
         <br>
         <p>ce texte</p><sup>expodentiel</sup>
+    <br>
+    <TEXTAREA name="comments" rows=4 cols=60>
+    </textarea>    
+            <br>
+            <form enctype="application/x-www-form-urlencoded" 
+              action="page.html" method=post>
+                Votre Nom <input type="text" name="nom" size=15> <p>
+                Votre email <input type="text" name="email" size=15> <p>
+                Votre commentaire <textarea name="comment" rows=5 cols=30></textarea> <p>
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+            </form>
+            <form action="recuper-donnees-formulaire.php.php" method="post">
+                Pseudo : <input type="text" name="pseudo" placeholder="saisir...">
+                <input type="submit" name="envoi">
+               </form>
+               <?php
+               if(isset($_POST['envoi'])){ // si formulaire soumis
+               echo $_POST['pseudo'];
+               }
+               ?>
     </body>
 </html>    

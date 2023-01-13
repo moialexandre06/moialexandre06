@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>quatrieme page du site</title>
+    <style>
+      .texteenrouge {
+        color: red;
+      }
+      body {
+        background-color: #b4b4b4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>4eme page</h1>
+    <br />
+    <form
+      enctype="application/x-www-form-urlencoded"
+      action="https://moialexandre06.github.io/page.html"
+      method="post"
+    >
+      <p><label>Votre Nom</label><input type="text" name="nom" size="15" /></p>
+      <p>Votre email <input type="text" name="email" size="15" /></p>
+      <p>
+        Votre commentaire
+        <textarea name="comment" rows="5" cols="30"></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="Effacer" />
+      </p>
+    </form>
+
+    <br />
+    <form action="recuper-donnees-formulaire.php.php" method="post">
+      Pseudo : <input type="text" name="pseudo" placeholder="saisir..." />
+      <input type="submit" name="envoi" />
+    </form>
+  </body>
+</html>
